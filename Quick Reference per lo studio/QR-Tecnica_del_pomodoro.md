@@ -1,5 +1,5 @@
 ---
-title: "QR – Tecnica del Pomodoro"
+title: "QR - Tecnica del Pomodoro"
 version: "1.0"
 autore: "<Classe/Studente>"
 licenza: "CC BY 4.0"
