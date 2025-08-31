@@ -7,7 +7,7 @@ ultimo_aggiornamento: "31.08.2025"
 ---
 
 ## Obiettivo del ciclo
-<compito specifico>
+< compito specifico >
 
 ## Ciclo
 - Lavoro: 25'
