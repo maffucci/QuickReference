@@ -3,7 +3,7 @@ title: "QR – Tecnica del Pomodoro"
 version: "1.0"
 autore: "<Classe/Studente>"
 licenza: "CC BY 4.0"
-ultimo_aggiornamento: "<GG-MM-AAAA>"
+ultimo_aggiornamento: "01-09-2025"
 ---
 
 ## Obiettivo del ciclo
