@@ -3,7 +3,7 @@ title: "QR - Metodo Cornell"
 version: "1.0"
 autore: "Classe/Studente"
 licenza: "CC BY 4.0"
-ultimo_aggiornamento: "01-09-2025"
+ultimo_aggiornamento: "31.08.2025
 ---
 
 ## Tema / Lezione
