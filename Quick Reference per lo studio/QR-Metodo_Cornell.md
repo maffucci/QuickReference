@@ -1,5 +1,5 @@
 ---
-title: "QR-Metodo Cornell"
+title: "QR - Metodo Cornell"
 version: "1.0"
 autore: "Classe/Studente"
 licenza: "CC BY 4.0"
