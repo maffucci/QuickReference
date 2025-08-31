@@ -11,11 +11,16 @@ ultimo_aggiornamento: "31.08.2025"
 - <termine 2 — definizione>
 
 ## Piano di richiami (1‑3‑7‑14 giorni)
-- D1: [ ] D3: [ ] D7: [ ] D14: [ ]
+- [ ] G1
+- [ ] G3
+- [ ] G7
+- [ ] G14
 
 ## Test di richiamo
 - Scrivi 3 domande a risposta breve
-- [ ] Test 1 - [ ] Test 2 - [ ] Test 3
+- [ ] Test 1
+- [ ] Test 2
+- [ ] Test 3
 
 ## Feedback
 <Cosa ho dimenticato? Come riformulo?>
