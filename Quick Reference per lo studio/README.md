@@ -1,0 +1,3 @@
+**Quick Reference**, schede di riferimento sulle tecniche di studio da consegnare agli studenti e fare inserire nei loro quaderni, un po’ come si fa con i formulari, ma dedicate a metodi e procedure (Cornell, Pomodoro, mappe, checklist, ecc…).
+
+Le schede sono **sintetiche** per scelta e personalizzabili da ciascuno: **non sostituiscono la spiegazione del docente**, vanno presentate e **contestualizzate in classe**, poi usate come promemoria operativo durante lo studio e le esercitazioni. Ogni Quick Reference offre la traccia essenziale (perché serve, passi rapidi, errori comuni) e lascia spazio per esempi, note e adattamenti: l’obiettivo è trasformarle in un supporto **pratico**, **tascabile** e **davvero vostro**.
