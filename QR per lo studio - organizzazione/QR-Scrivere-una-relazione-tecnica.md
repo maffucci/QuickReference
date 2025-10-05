@@ -1,46 +1,25 @@
 ---
-title: "Relazione tecnica – "
-autore: "<classe/nome cognome>"
-data: ""
-versione: "1.0"
+title: "QR - Tecnica del Pomodoro"
+version: "1.0"
+autore: "<Classe/Studente>"
+licenza: "CC BY 4.0"
+ultimo_aggiornamento: "31.08.2025"
 ---
 
-## 1) Scopo / Obiettivo
+## Obiettivo del ciclo
+< compito specifico >
 
+## Ciclo
+- Lavoro: 25'
+- Pausa: 5'
+- Ripeti x4 → Pausa lunga 15–30'
 
-## 2) Materiali e Strumenti
-- Componenti/sensori (modello, tolleranze): …
-- Strumentazione (portata/risoluzione): …
-- Software/Firmware (versioni): …
-- Datasheet/Riferimenti: …
+## Tracker pomodori
+- [ ] 1 - [ ] 2 - [ ] 3 - [ ] 4
 
-## 3) Schema & Configurazione
-- Schema elettrico / diagramma (con punti di misura)
-- Pin-out / cablaggio / indirizzi (se I²C/SPI)
-- Foto del setup (facoltativa ma consigliata)
+## Interruzioni / distrazioni (log)
+- <evento, durata, soluzione>
 
-## 4) Metodo (passi riproducibili)
-1) …
-2) …
-- Parametri: 
-- Criteri di accettazione: 
-
-## 5) Risultati (dati ordinati)
-- Tabella(i) con unità di misura e incertezze
-- Grafici con assi etichettati e legenda
-- Eventuali schermate (Serial/oscilloscopio)
-
-## 6) Discussione (interpretazione)
-- Cosa mostrano i dati? (trend, anomalie)
-- Errori e limiti (strumento, metodo, ambiente)
-- Alternative e possibili miglioramenti
-
-## 7) Conclusioni
-<2–3 frasi: risposta allo scopo + prossimo passo>
-
-## 8) Allegati
-- Codice .ino / script / CSV
-- Schema in formato editabile
-
-## 9) Riferimenti
-- Datasheet, articoli, pagine web (con data di accesso)
+## Consuntivo
+- Pomodori effettivi: <n>
+- Note: <che ha funzionato, cosa migliorare>
