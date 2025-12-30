@@ -1,0 +1,51 @@
+Fronte	Retro	Tag
+Cos’è Arduino (in pratica)?	Una piattaforma hardware + software per prototipare: una scheda con microcontrollore e un IDE per scrivere e caricare programmi (sketch).	hardware software concetti
+Cos’è uno sketch?	Il programma Arduino scritto nell’IDE e caricato sulla scheda.	software coding base
+Qual è la struttura minima di uno sketch?	Due funzioni principali: setup() (una volta) e loop() (ripete continuamente).	software coding base
+A cosa serve setup()?	Si esegue una sola volta all’avvio/reset: inizializzazioni (pinMode, Serial.begin, ecc.).	software coding base
+A cosa serve loop()?	Ciclo principale: il codice viene eseguito ripetutamente finché la scheda è alimentata.	software coding base
+Cosa sono i pin digitali?	Pin che leggono/scrivono due stati logici: LOW (0) o HIGH (1).	hardware elettronica base
+Cosa sono i pin analogici?	Pin usati tipicamente per leggere valori analogici tramite ADC (es. analogRead), spesso etichettati A0, A1, …	hardware elettronica base
+Che differenza c’è tra analogRead e analogWrite?	analogRead legge un valore analogico (ADC). analogWrite NON è un’uscita analogica vera: di solito è PWM (se disponibile su quel pin).	elettronica coding base
+Cosa indica il simbolo ~ vicino a un pin?	Indica che quel pin supporta PWM (analogWrite).	hardware elettronica
+Cos’è il PWM?	Un segnale digitale “a impulsi” con duty cycle variabile: simula un valore medio (utile per luminosità LED, velocità motori con driver).	elettronica coding
+Perché serve una massa comune (GND) tra Arduino e circuito esterno?	Perché i segnali hanno senso solo rispetto a un riferimento comune: senza GND condiviso, letture e comandi diventano instabili o errati.	elettronica hardware
+Quali sono le tensioni logiche tipiche sulle schede Arduino più comuni?	Spesso 5V (es. Arduino Uno “classico”), ma alcune schede lavorano a 3.3V: controlla sempre le specifiche della tua board.	hardware sicurezza
+Cos’è la breadboard?	Una basetta sperimentale senza saldature: consente di collegare componenti e fili rapidamente per prototipi.	hardware laboratorio
+Perché si usa una resistenza in serie a un LED?	Per limitare la corrente ed evitare di bruciare LED e/o pin della scheda.	elettronica sicurezza
+Valore tipico della resistenza per un LED (5V) in prototipi base?	Spesso 220–330 Ω (dipende dal LED e dalla corrente desiderata).	elettronica laboratorio
+Cosa fa pinMode(pin, OUTPUT)?	Imposta un pin digitale come uscita.	coding base
+Cosa fa pinMode(pin, INPUT)?	Imposta un pin digitale come ingresso (alta impedenza).	coding base
+Cosa fa pinMode(pin, INPUT_PULLUP)?	Imposta un ingresso usando la resistenza di pull-up interna: a riposo legge HIGH, premendo un pulsante verso GND legge LOW.	coding elettronica
+Cosa fa digitalWrite(pin, HIGH/LOW)?	Imposta un’uscita digitale ad HIGH o LOW.	coding base
+Cosa fa digitalRead(pin)?	Legge lo stato di un ingresso digitale: HIGH o LOW.	coding base
+Cosa restituisce analogRead(A0)?	Un numero intero che rappresenta la tensione letta (intervallo e risoluzione dipendono dalla scheda/ADC).	coding elettronica
+Cosa fa delay(ms)?	Ferma l’esecuzione per un certo numero di millisecondi (bloccante).	coding base
+Quando è meglio usare millis() invece di delay()?	Quando vuoi gestire tempi senza bloccare il programma (multi-task “semplice”, lampeggi e controlli simultanei).	coding buone_pratiche
+A cosa serve la porta Serial?	Comunicazione con PC (debug, logging, comandi) tramite Serial Monitor.	software debugging
+Cosa fa Serial.begin(9600)?	Inizializza la comunicazione seriale impostando il baud rate (qui 9600).	coding debugging
+Cos’è il baud rate?	Velocità di trasmissione della seriale (bit al secondo). debugging concetti
+Cosa fa Serial.println(x)?	Invia x sulla seriale e va a capo: utile per vedere valori e stati nel Serial Monitor.	coding debugging
+Cosa significa “compilare” uno sketch?	Tradurre il codice in linguaggio macchina/firmware pronto per essere caricato sulla scheda.	software concetti
+Qual è la differenza tra “Verifica” e “Carica” nell’IDE?	Verifica compila e controlla errori; Carica compila e poi trasferisce il programma sulla scheda.	software base
+Cosa devo selezionare prima di caricare uno sketch?	La board corretta e la porta (Tools/Strumenti: Scheda e Porta), altrimenti upload può fallire.	software base
+Che cos’è un “reset” della scheda?	Riavvio del microcontrollore: riparte da setup() e poi loop().	hardware concetti
+Come si alimenta Arduino in modo semplice?	Tramite USB dal PC oppure con alimentazione esterna (jack/VIN) se previsto dalla scheda.	hardware sicurezza
+Perché è rischioso alimentare motori direttamente dai pin Arduino?	I pin non possono fornire corrente sufficiente e rischi di danneggiare la scheda: usa driver/transistor e alimentazione separata con GND comune.	sicurezza elettronica
+A cosa serve il diodo di flyback con un relè/motore DC?	Protegge dal picco di tensione generato da carichi induttivi quando si spengono.	elettronica sicurezza
+Che differenza c’è tra una variabile e una costante?	Variabile: può cambiare valore durante il programma. Costante (es. const): non dovrebbe cambiare e rende il codice più chiaro/sicuro.	coding base
+Perché conviene usare nomi significativi per variabili e pin?	Migliora leggibilità e manutenzione; riduce errori (soprattutto in progetti di laboratorio).	coding buone_pratiche
+Cosa sono i commenti nel codice?	Testo ignorato dal compilatore, utile per spiegare e documentare: // singola linea, /* ... */ blocco.	coding base
+Cos’è una libreria Arduino?	Un insieme di codice riutilizzabile che aggiunge funzioni (es. gestire sensori, display, comunicazioni).	software coding
+Come si installa una libreria in modo standard?	Tramite Library Manager dell’IDE (Gestione librerie) o importando manualmente se necessario.	software base
+Perché il codice per un pulsante può “ballare” (letture instabili)?	Per il rimbalzo dei contatti (debounce): la pressione genera più transizioni rapide.	elettronica debugging
+Come si gestisce il debounce in modo semplice?	Con un piccolo ritardo (approccio base) o meglio con una logica a stati e millis() per non bloccare.	coding buone_pratiche
+Che cosa significa HIGH/LOW su un ingresso con INPUT_PULLUP?	A riposo HIGH (pull-up interno). Quando chiudi verso GND (pulsante premuto) diventa LOW.	elettronica coding
+Che cos’è un “partitore di tensione” e perché è utile?	Due resistenze in serie per ottenere una tensione ridotta: utile per adattare segnali a ingressi (entro limiti sicuri).	elettronica concetti
+Perché un circuito può non funzionare anche se il codice è corretto?	Errori comuni: GND non comune, cablaggio invertito, resistenza mancante, pin sbagliato, alimentazione insufficiente.	debugging laboratorio
+Qual è il modo più rapido per fare debug con Arduino?	Serial.println per stampare valori/stati + controlli incrementali (una cosa alla volta).	debugging buone_pratiche
+Snippet: lampeggio LED (cosa fa questo codice?)	<pre><code>const int LED=13;\nvoid setup(){ pinMode(LED,OUTPUT); }\nvoid loop(){ digitalWrite(LED,HIGH); delay(500);\n            digitalWrite(LED,LOW);  delay(500); }</code></pre>\nLampeggia il LED sul pin 13: 0,5 s acceso e 0,5 s spento.	coding esempi
+Snippet: leggere un pulsante con INPUT_PULLUP (cosa leggo premendo?)	<pre><code>const int BTN=2;\nvoid setup(){ pinMode(BTN, INPUT_PULLUP);\n             Serial.begin(9600); }\nvoid loop(){ Serial.println(digitalRead(BTN));\n             delay(200); }</code></pre>\nA riposo stampa 1 (HIGH). Premendo (verso GND) stampa 0 (LOW).	coding esempi
+Snippet: leggere un potenziometro (a cosa serve?)	<pre><code>void setup(){ Serial.begin(9600); }\nvoid loop(){ int v=analogRead(A0);\n             Serial.println(v); delay(100); }</code></pre>\nLegge un valore analogico su A0 e lo stampa: utile per vedere variazioni di un sensore/potenziometro.	coding esempi
+Snippet: PWM per regolare un LED (che cosa ottengo?)	<pre><code>const int LED=9;\nvoid setup(){ pinMode(LED,OUTPUT); }\nvoid loop(){ analogWrite(LED,128); }</code></pre>\nImposta un PWM al 50% circa: LED a luminosità “media” (su pin PWM).	coding esempi
+Snippet: temporizzazione non bloccante con millis (idea base)	<pre><code>const int LED=13;\nunsigned long t0=0;\nbool stato=false;\nvoid setup(){ pinMode(LED,OUTPUT); }\nvoid loop(){ if(millis()-t0>=500){ t0=millis();\n          stato=!stato; digitalWrite(LED,stato);} }</code></pre>\nLampeggia senza delay: il loop resta libero per altre attività.	coding esempi buone_pratiche
