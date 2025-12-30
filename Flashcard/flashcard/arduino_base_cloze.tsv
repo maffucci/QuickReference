@@ -1,0 +1,14 @@
+Testo	Extra	Tag
+In Arduino lo sketch ha due funzioni principali: {{c1::setup()}} e {{c2::loop()}}.	setup() una volta, loop() ripetutamente.	coding cloze
+La funzione {{c1::setup()}} viene eseguita {{c2::una sola volta}} all’avvio o dopo reset.	Usala per pinMode e Serial.begin.	coding cloze
+La funzione {{c1::loop()}} viene eseguita {{c2::in ciclo continuo}} finché la scheda è alimentata.	È il “ciclo principale”.	coding cloze
+Per impostare un pin come uscita uso {{c1::pinMode(pin, OUTPUT)}}.	Prima di digitalWrite su quel pin.	coding cloze
+Per leggere un ingresso digitale uso {{c1::digitalRead(pin)}} che restituisce {{c2::HIGH o LOW}}.	Verifica cablaggio e pull-up/pull-down.	coding cloze
+Per scrivere su un’uscita digitale uso {{c1::digitalWrite(pin, HIGH/LOW)}}.	Ricorda pinMode OUTPUT.	coding cloze
+La lettura analogica tipica è {{c1::analogRead(A0)}} e restituisce un {{c2::intero}} proporzionale alla tensione.	L’intervallo dipende dalla scheda.	elettronica cloze
+Il simbolo {{c1::~}} vicino a un pin indica supporto {{c2::PWM}} (analogWrite).	Non è DAC reale nella maggior parte dei casi.	elettronica cloze
+La seriale si inizializza con {{c1::Serial.begin(9600)}} e si stampa con {{c2::Serial.println()}}.	Utile per debug.	debugging cloze
+{{c1::delay(ms)}} è una temporizzazione {{c2::bloccante}}; {{c3::millis()}} permette temporizzazioni non bloccanti.	Per gestire più azioni insieme, preferisci millis().	coding cloze
+Con {{c1::INPUT_PULLUP}} l’ingresso legge {{c2::HIGH}} a riposo e {{c3::LOW}} quando il pulsante chiude verso GND.	Comodo per ridurre componenti esterni.	elettronica cloze
+Il rimbalzo dei pulsanti si chiama {{c1::debounce}} e può causare letture {{c2::instabili}}.	Soluzione base: ritardo; migliore: logica a stati con millis().	debugging cloze
+Per evitare danni, i motori vanno pilotati con {{c1::driver/transistor}} e spesso serve un diodo di {{c2::flyback}}.	Non collegare un motore direttamente a un pin.	sicurezza cloze
